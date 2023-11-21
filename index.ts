@@ -16,13 +16,14 @@ const mongoDBUrl = process.env.MONGODB_URL;
 if (!mongoDBUrl) {
   throw new Error('MONGODB_URL environment variable is not set');
 }
+
 mongoose.connect(mongoDBUrl).then(() => console.log('Connected to MongoDB')).catch(err => console.error('MongoDB connection error:', err));
 app.use("/courses",courseroutes);
 app.use("/user",userroutes);
 app.get("/",(req,res)=>{
   res.json({message:"Hello World"});
 })
-console.log("Check this out");
+console.log("Testing");
 
 
 app.listen(port, () => {
