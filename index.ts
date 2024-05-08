@@ -20,9 +20,7 @@ if (!mongoDBUrl) {
 mongoose.connect(mongoDBUrl).then(() => console.log('Connected to MongoDB')).catch(err => console.error('MongoDB connection error:', err));
 app.use("/courses",courseroutes);
 app.use("/user",userroutes);
-app.get("/",(req,res)=>{
-  res.json({message:"Hello World"});
-})
+
 console.log("Testing");
 
 

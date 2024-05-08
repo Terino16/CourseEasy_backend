@@ -3,7 +3,7 @@ import express from 'express';
 const secretKey = "Anubhavbjpneta";
 const jwt = require("jsonwebtoken");
 
-const authenticate = (req:express.Request, res:express.Response, next:express.NextFunction) => {
+ export const authenticate = (req:express.Request, res:express.Response, next:express.NextFunction) => {
  
     const sessionToken = req.cookies['token'];
 
